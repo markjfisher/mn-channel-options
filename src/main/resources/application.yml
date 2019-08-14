@@ -1,0 +1,13 @@
+micronaut:
+  application:
+    name: channel-options
+  http:
+    services:
+      foo:
+        urls:
+          - http://localhost:8080/bar
+        # OK here as yaml, but startup application with:
+        # MICRONAUT_HTTP_SERVICES_FOO_CHANNEL_OPTIONS_SO_KEEPALIVE=false ./gradlew run
+        # will fail with ClassCastException
+        channel-options:
+          so_keepalive: true

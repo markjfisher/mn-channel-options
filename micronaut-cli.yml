@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: channel.options
+---
+testFramework: spek
+sourceLanguage: kotlin
